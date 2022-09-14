@@ -13,8 +13,10 @@ public class MarbleMovement : MonoBehaviour
     public Camera cam;
     public LayerMask enviromentLayer;
     public Transform playerStuffObj;
-    Vector3 euler;
+    Vector3 flashDirection;
     public CinemachineFreeLook cineMachine;
+
+    public Vector3 FlashDirection { get => flashDirection; set => flashDirection = value; }
 
     void Start()
     {
@@ -56,7 +58,6 @@ public class MarbleMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift)) return;
 
         float camRotY = cam.transform.rotation.eulerAngles.y;
-        euler = transform.eulerAngles;
 
         Quaternion camRot = Quaternion.Euler(0, camRotY, 0);
         Vector3 direction = new Vector3(yAxis, 0, xAxis).normalized * speed;
