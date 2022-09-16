@@ -19,7 +19,6 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] GameObject leftFrame;
     [SerializeField] GameObject backGround;
 
-
     private void Awake()
     {
         if (instance == null)
@@ -93,21 +92,5 @@ public class UI_Manager : MonoBehaviour
     }
 
     #endregion
-
-    #region Wardrobe
-
-    public void SetClickedMaterial(Transform transform)
-    {
-        if (!GameManager.Instance.allPlayerMaterials.Contains(transform.GetComponent<Renderer>().material))
-        {
-            GameManager.Instance.allPlayerMaterials.Add(transform.GetComponent<Renderer>().material);
-        }
-    }
-
-
-    #endregion
-
-
-
 
 }

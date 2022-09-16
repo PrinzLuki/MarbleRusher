@@ -7,7 +7,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static GameManager Instance { get { return instance; } }
 
-    [SerializeField] Transform player;
+    [Header("Data To Save")]
+    public MaterialData playersMat;
+    public int playerLevel = 1;
+
+    public List<MaterialData> matDatas;
 
     private void Awake()
     {
@@ -19,22 +23,16 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    [Header("Data To Save")]
-    public int playerMat = 1;
-    public int playerLevel = 1;
-
-    public List<Material> allPlayerMaterials = new();
-
+    private void Start()
+    {
+    }
 
     #region SaveData
     public void LoadSavedData()
     {
         var data = SaveData.LoadData();
-        if (data != null)
-        {
-            playerMat = data.playerMaterial;
-            playerLevel = data.level;
-        }
+
+        playersMat.index = data.playerMaterial;
     }
 
     public void Save()
@@ -43,15 +41,16 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    void LoadPlayerMaterial()
+    public void LoadPlayerMaterial(Transform player)
     {
-        player = GameObject.FindWithTag("Player").transform;
-        if (player == null) return;
+        if (player == null) { Debug.LogWarning("No Player found!!"); return; }
+
+        Debug.Log($"{player.GetComponent<Renderer>().material} || {playersMat.index} || {matDatas[playersMat.index].material}");
+        player.GetComponent<Renderer>().material = matDatas[playersMat.index].material;
     }
 
     void LoadPlayerLevel()
     {
 
     }
-
 }

@@ -5,11 +5,11 @@ public static class SaveData
 {
     public static void Save()
     {
-        BinaryFormatter binary = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.Data";
-        FileStream stream = new FileStream(path, FileMode.Create);
+        BinaryFormatter binary = new();
+        string path = Application.persistentDataPath + "/player.SavedData"; /*Application.persistentDataPath + " / player.Data"*/
+        FileStream stream = new(path, FileMode.Create);
 
-        PlayerData data = new PlayerData(GameManager.instance.playerMat, GameManager.instance.playerLevel);
+        PlayerData data = new(GameManager.Instance.playersMat.index);
 
         binary.Serialize(stream, data);
         stream.Close();
@@ -17,19 +17,22 @@ public static class SaveData
 
     public static PlayerData LoadData()
     {
-        string path = Application.persistentDataPath + "/player.Data";
+        string path = Application.persistentDataPath + "/player.SavedData";
 
         if (File.Exists(path))
         {
-            BinaryFormatter binary = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-            
+            BinaryFormatter binary = new();
+            FileStream stream = new(path, FileMode.Open);
+
             PlayerData data = binary.Deserialize(stream) as PlayerData;
             stream.Close();
             return data;
         }
-        else Debug.LogWarning($"Save file not found");
-        return null;
+        else
+        {
+            Debug.LogWarning($"Save file not found");
+            return null;
+        }
     }
 
 }

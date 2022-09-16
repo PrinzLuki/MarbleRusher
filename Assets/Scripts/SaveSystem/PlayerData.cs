@@ -7,9 +7,8 @@ public class PlayerData
     public int playerMaterial;
     public int level;
 
-    public PlayerData(int playerMaterial, int level)
+    public PlayerData(int playerMaterial)
     {
         this.playerMaterial = playerMaterial;
-        this.level = level;
     }
 }

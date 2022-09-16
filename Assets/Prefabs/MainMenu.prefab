@@ -2931,6 +2931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8490796214561444927}
+  - component: {fileID: 1128678795271364656}
   m_Layer: 0
   m_Name: Wardrobe
   m_TagString: Untagged
@@ -2957,6 +2958,18 @@ Transform:
   m_Father: {fileID: 8490796214070844888}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128678795271364656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490796214561444920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef11adf7765c0c4e90e90efcd977d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8490796214639696300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5873,6 +5886,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 8490796213441275818}
     m_Modifications:
+    - target: {fileID: 3077551170560120282, guid: 4d5679bff4a351e4592c6511bf1a8280,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128678795271364656}
     - target: {fileID: 5089895919715397819, guid: 4d5679bff4a351e4592c6511bf1a8280,
         type: 3}
       propertyPath: m_RootOrder

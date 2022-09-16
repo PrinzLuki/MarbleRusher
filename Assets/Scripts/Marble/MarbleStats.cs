@@ -7,6 +7,11 @@ public class MarbleStats : MonoBehaviour, IDamageable
 {
     public float Health;
 
+    private void Start()
+    {
+        GameManager.Instance.LoadPlayerMaterial(this.transform);
+    }
+
     public void TakeDmg(int dmg)
     {
         Health -= dmg;
