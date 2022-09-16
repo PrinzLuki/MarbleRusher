@@ -40,7 +40,7 @@ public class SceneManagement : MonoBehaviour
 
     public void LoadScene()
     {
-        StartCoroutine(LoadSceneDelay(1));
+        StartCoroutine(LoadSceneDelay(GameManager.Instance.playerLevel));
     }
 
     public void LoadMenu()
