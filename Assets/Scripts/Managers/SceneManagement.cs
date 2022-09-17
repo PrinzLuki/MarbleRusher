@@ -42,6 +42,10 @@ public class SceneManagement : MonoBehaviour
     {
         StartCoroutine(LoadSceneDelay(GameManager.Instance.playerLevel));
     }
+     public void LoadNextLevelScene()
+    {
+        StartCoroutine(LoadSceneDelay(++GameManager.Instance.playerLevel));
+    }
 
     public void LoadMenu()
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class WinZone : MonoBehaviour
 
     IEnumerator WinSequence(GameObject player)
     {
+        GameManager.Instance.StopTimer();
         GetComponent<Animator>().SetTrigger("win");
         yield return new WaitForSeconds(0.15f);
         player.GetComponent<MarbleMovement>().enabled = false;

@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("StartGame");
         SceneManagement.Instance.LoadScene();
+        UI_Manager.Instance.ActivateGameUI(true);
         Cursor.lockState = CursorLockMode.Locked;
 
     }
@@ -29,6 +30,11 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("ExitGame");
         Application.Quit();
+    }
+
+    public void ChangeButtonColor()
+    {
+
     }
 
     public void IncreaseMusicVolume(TMP_Text value)

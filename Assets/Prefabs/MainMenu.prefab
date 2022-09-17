@@ -1476,9 +1476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '100
-
-'
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 038bbb80ff5a67a43ac592f9a96043fc, type: 2}
   m_sharedMaterial: {fileID: -694268090818863870, guid: 038bbb80ff5a67a43ac592f9a96043fc,
@@ -3785,6 +3783,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8490796214754267199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3956,9 +3966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '100
-
-'
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 038bbb80ff5a67a43ac592f9a96043fc, type: 2}
   m_sharedMaterial: {fileID: -694268090818863870, guid: 038bbb80ff5a67a43ac592f9a96043fc,
@@ -4094,7 +4102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 038bbb80ff5a67a43ac592f9a96043fc, type: 2}
   m_sharedMaterial: {fileID: -694268090818863870, guid: 038bbb80ff5a67a43ac592f9a96043fc,
@@ -5888,9 +5896,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3077551170560120282, guid: 4d5679bff4a351e4592c6511bf1a8280,
         type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077551170560120282, guid: 4d5679bff4a351e4592c6511bf1a8280,
+        type: 3}
       propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1128678795271364656}
+    - target: {fileID: 3077551170560120282, guid: 4d5679bff4a351e4592c6511bf1a8280,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 5096506501790359443}
+    - target: {fileID: 3077551170560120282, guid: 4d5679bff4a351e4592c6511bf1a8280,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5089895919715397819, guid: 4d5679bff4a351e4592c6511bf1a8280,
         type: 3}
       propertyPath: m_RootOrder
@@ -5946,6 +5969,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 32.455
       objectReference: {fileID: 0}
+    - target: {fileID: 5986159264877963347, guid: 4d5679bff4a351e4592c6511bf1a8280,
+        type: 3}
+      propertyPath: m_Name
+      value: Wardrobe_Lava
+      objectReference: {fileID: 0}
     - target: {fileID: 8159948205059503950, guid: 4d5679bff4a351e4592c6511bf1a8280,
         type: 3}
       propertyPath: m_Name
@@ -5957,6 +5985,12 @@ PrefabInstance:
 --- !u!4 &3708625733419372231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5089895919715397819, guid: 4d5679bff4a351e4592c6511bf1a8280,
+    type: 3}
+  m_PrefabInstance: {fileID: 8490796213586443900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5096506501790359443 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3706237654902497775, guid: 4d5679bff4a351e4592c6511bf1a8280,
     type: 3}
   m_PrefabInstance: {fileID: 8490796213586443900}
   m_PrefabAsset: {fileID: 0}
@@ -6023,14 +6057,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -31.969
       objectReference: {fileID: 0}
+    - target: {fileID: 1819722419993067901, guid: 7aa617296dffc5c49a2046c2159f2173,
+        type: 3}
+      propertyPath: m_Name
+      value: Wardrobe_Watermelon
+      objectReference: {fileID: 0}
     - target: {fileID: 4282389347679788640, guid: 7aa617296dffc5c49a2046c2159f2173,
         type: 3}
       propertyPath: m_Name
       value: Wardrobe_Watermelon
       objectReference: {fileID: 0}
+    - target: {fileID: 6982347158437788916, guid: 7aa617296dffc5c49a2046c2159f2173,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982347158437788916, guid: 7aa617296dffc5c49a2046c2159f2173,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128678795271364656}
+    - target: {fileID: 6982347158437788916, guid: 7aa617296dffc5c49a2046c2159f2173,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 930418206362747903}
+    - target: {fileID: 6982347158437788916, guid: 7aa617296dffc5c49a2046c2159f2173,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aa617296dffc5c49a2046c2159f2173, type: 3}
+--- !u!4 &930418206362747903 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8736099571737118913, guid: 7aa617296dffc5c49a2046c2159f2173,
+    type: 3}
+  m_PrefabInstance: {fileID: 8490796213755153214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8729173104509948587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 932560252806502805, guid: 7aa617296dffc5c49a2046c2159f2173,
@@ -6045,6 +6110,31 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 8490796213441275818}
     m_Modifications:
+    - target: {fileID: 3955822277323642145, guid: bb6d28d3ed37f154ea39a9a182734c57,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955822277323642145, guid: bb6d28d3ed37f154ea39a9a182734c57,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128678795271364656}
+    - target: {fileID: 3955822277323642145, guid: bb6d28d3ed37f154ea39a9a182734c57,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6551086772663653416}
+    - target: {fileID: 3955822277323642145, guid: bb6d28d3ed37f154ea39a9a182734c57,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711500279511771304, guid: bb6d28d3ed37f154ea39a9a182734c57,
+        type: 3}
+      propertyPath: m_Name
+      value: Wardrobe_Electrical
+      objectReference: {fileID: 0}
     - target: {fileID: 6553509606901526592, guid: bb6d28d3ed37f154ea39a9a182734c57,
         type: 3}
       propertyPath: m_RootOrder
@@ -6114,6 +6204,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8490796214372169020}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &6551086772663653416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3404576862712815892, guid: bb6d28d3ed37f154ea39a9a182734c57,
+    type: 3}
+  m_PrefabInstance: {fileID: 8490796214372169020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8490796214489358969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6122,7 +6218,32 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 8490796213441275818}
     m_Modifications:
+    - target: {fileID: 1678688352063925609, guid: 69aedf4cd48c6b844b48b434c1d479c7,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678688352063925609, guid: 69aedf4cd48c6b844b48b434c1d479c7,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128678795271364656}
+    - target: {fileID: 1678688352063925609, guid: 69aedf4cd48c6b844b48b434c1d479c7,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8882263926351641381}
+    - target: {fileID: 1678688352063925609, guid: 69aedf4cd48c6b844b48b434c1d479c7,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5531471452678754301, guid: 69aedf4cd48c6b844b48b434c1d479c7,
+        type: 3}
+      propertyPath: m_Name
+      value: Wardrobe_ElectricalLegendary
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993135558098358496, guid: 69aedf4cd48c6b844b48b434c1d479c7,
         type: 3}
       propertyPath: m_Name
       value: Wardrobe_ElectricalLegendary
@@ -6191,6 +6312,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8490796214489358969}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &8882263926351641381 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1049758524011845980, guid: 69aedf4cd48c6b844b48b434c1d479c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8490796214489358969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8490796214768846674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6199,6 +6326,31 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 8490796213441275818}
     m_Modifications:
+    - target: {fileID: 3573442150030747176, guid: 3b1e0e911b2ce5a4992ce509cd6ba642,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573442150030747176, guid: 3b1e0e911b2ce5a4992ce509cd6ba642,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128678795271364656}
+    - target: {fileID: 3573442150030747176, guid: 3b1e0e911b2ce5a4992ce509cd6ba642,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6744333274653119823}
+    - target: {fileID: 3573442150030747176, guid: 3b1e0e911b2ce5a4992ce509cd6ba642,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202184143699024801, guid: 3b1e0e911b2ce5a4992ce509cd6ba642,
+        type: 3}
+      propertyPath: m_Name
+      value: Wardrobe_Hypno2
+      objectReference: {fileID: 0}
     - target: {fileID: 6737441766933775177, guid: 3b1e0e911b2ce5a4992ce509cd6ba642,
         type: 3}
       propertyPath: m_RootOrder
@@ -6268,6 +6420,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8490796214768846674}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &6744333274653119823 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2904242637186568733, guid: 3b1e0e911b2ce5a4992ce509cd6ba642,
+    type: 3}
+  m_PrefabInstance: {fileID: 8490796214768846674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8490796214777738843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6276,6 +6434,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 8490796213441275818}
     m_Modifications:
+    - target: {fileID: 789932189464842648, guid: 98c073824d8f81842b60714478b1aa9a,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 789932189464842648, guid: 98c073824d8f81842b60714478b1aa9a,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128678795271364656}
+    - target: {fileID: 789932189464842648, guid: 98c073824d8f81842b60714478b1aa9a,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 7420141041154331638}
+    - target: {fileID: 789932189464842648, guid: 98c073824d8f81842b60714478b1aa9a,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5872195797521036044, guid: 98c073824d8f81842b60714478b1aa9a,
         type: 3}
       propertyPath: m_Name
@@ -6336,12 +6514,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -72.436
       objectReference: {fileID: 0}
+    - target: {fileID: 8309373847683394577, guid: 98c073824d8f81842b60714478b1aa9a,
+        type: 3}
+      propertyPath: m_Name
+      value: Wardrobe_Hypno
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 98c073824d8f81842b60714478b1aa9a, type: 3}
 --- !u!4 &1383836724294468258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7413274635253888249, guid: 98c073824d8f81842b60714478b1aa9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8490796214777738843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7420141041154331638 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1381757213143721389, guid: 98c073824d8f81842b60714478b1aa9a,
     type: 3}
   m_PrefabInstance: {fileID: 8490796214777738843}
   m_PrefabAsset: {fileID: 0}
@@ -6353,6 +6542,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 8490796213441275818}
     m_Modifications:
+    - target: {fileID: 1056175110545508722, guid: db0771763e805bf499479d726e51671b,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056175110545508722, guid: db0771763e805bf499479d726e51671b,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128678795271364656}
+    - target: {fileID: 1056175110545508722, guid: db0771763e805bf499479d726e51671b,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 7108804985938133977}
+    - target: {fileID: 1056175110545508722, guid: db0771763e805bf499479d726e51671b,
+        type: 3}
+      propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Transform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6133925206224677862, guid: db0771763e805bf499479d726e51671b,
         type: 3}
       propertyPath: m_Name
@@ -6413,12 +6622,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -24.097
       objectReference: {fileID: 0}
+    - target: {fileID: 8579073562454308091, guid: db0771763e805bf499479d726e51671b,
+        type: 3}
+      propertyPath: m_Name
+      value: Wardrobe_ChildrenPainting
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: db0771763e805bf499479d726e51671b, type: 3}
 --- !u!4 &1687247484665270925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7115424139307314195, guid: db0771763e805bf499479d726e51671b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8490796215045455518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7108804985938133977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1689644066798419271, guid: db0771763e805bf499479d726e51671b,
     type: 3}
   m_PrefabInstance: {fileID: 8490796215045455518}
   m_PrefabAsset: {fileID: 0}

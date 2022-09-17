@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class UI_Manager : MonoBehaviour
 {
@@ -13,11 +14,26 @@ public class UI_Manager : MonoBehaviour
     bool isPlaying = true;
 
     [Header("WIN Window")]
+    [SerializeField] Canvas winScreenCanvas;
     [SerializeField] GameObject frame;
     [SerializeField] GameObject rightFrame;
     [SerializeField] GameObject lowerFrame;
     [SerializeField] GameObject leftFrame;
     [SerializeField] GameObject backGround;
+    [SerializeField] TMP_Text neededTimeTxt;
+    [Header("Game UI")]
+    [SerializeField] TMP_Text timerTmp;
+
+    private void OnEnable()
+    {
+        GameManager.OnTimeChanged += TimerTextChange;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnTimeChanged -= TimerTextChange;
+    }
+
 
     private void Awake()
     {
@@ -31,6 +47,11 @@ public class UI_Manager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
     }
+
+    private void Start()
+    {
+    }
+
 
     private void Update()
     {
@@ -61,12 +82,18 @@ public class UI_Manager : MonoBehaviour
         ResetWinScreen();
     }
 
+    public void ActivateGameUI(bool isActive)
+    {
+        timerTmp.gameObject.SetActive(isActive);
+    }
+
     public void BackToMenu()
     {
         SceneManagement.Instance.LoadMenu();
         isPaused = false;
         pauseObj.SetActive(isPaused);
         ResetWinScreen();
+        ActivateGameUI(false);
     }
     #endregion
 
@@ -74,11 +101,13 @@ public class UI_Manager : MonoBehaviour
 
     public void StartWinSequence()
     {
+        winScreenCanvas.worldCamera = Camera.main;
         isPlaying = false;
         isPaused = false;
         pauseObj.SetActive(isPaused);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        SetTimeInWinScreen();
         frame.SetActive(true);
     }
 
@@ -91,6 +120,48 @@ public class UI_Manager : MonoBehaviour
         backGround.SetActive(false);
     }
 
+    public void SetTimeInWinScreen()
+    {
+        neededTimeTxt.text = timerTmp.text;
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManagement.Instance.LoadNextLevelScene();
+        isPlaying = true;
+        isPaused = false;
+        pauseObj.SetActive(isPaused);
+        ResetWinScreen();
+    }
+
     #endregion
+
+
+
+    public void TimerTextChange(float time)
+    {
+        int roundedTime = Mathf.RoundToInt(time);
+        int minutes = roundedTime / 60;
+        int seconds = roundedTime % 60;
+
+        if(minutes < 10 && seconds > 10)
+        {
+            timerTmp.text = "0" + minutes.ToString() + ":" + seconds.ToString();
+        }
+        else if(minutes < 10 && seconds < 10)
+        {
+            timerTmp.text = "0" + minutes.ToString() + ":" + "0" + seconds.ToString();
+        }
+        else if(minutes > 10 && seconds < 10)
+        {
+            timerTmp.text = minutes.ToString() + ":" + "0" + seconds.ToString();
+        }
+        else if(minutes > 10 && seconds > 10)
+        {
+            timerTmp.text = minutes.ToString() + ":" + seconds.ToString();
+        }
+
+
+    }
 
 }

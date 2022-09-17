@@ -10,6 +10,9 @@ public class MarbleStats : MonoBehaviour, IDamageable
     private void Start()
     {
         GameManager.Instance.LoadPlayerMaterial(this.transform);
+        GameManager.Instance.StopTimer();
+        GameManager.Instance.ResetTimer();
+        GameManager.Instance.StartTimer();
     }
 
     public void TakeDmg(int dmg)

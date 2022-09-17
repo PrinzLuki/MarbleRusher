@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,10 @@ public class GameManager : MonoBehaviour
 
     public List<MaterialData> matDatas;
 
+    float matchTime;
+
+    public static event Action<float> OnTimeChanged;
+
     private void Awake()
     {
         if (instance == null) { instance = this; }
@@ -23,9 +28,34 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    #region TimeCounter
+    public void ResetTimer()
     {
+        matchTime = 0;
+    } 
+
+    public void StartTimer()
+    {
+        StartCoroutine(Timer());
     }
+
+    IEnumerator Timer()
+    {
+        while (true)
+        {
+            matchTime += Time.deltaTime;
+            OnTimeChanged?.Invoke(matchTime);
+            yield return null;
+        }
+    }
+
+    public void StopTimer()
+    {
+        StopAllCoroutines();
+    }
+
+    #endregion
+
 
     #region SaveData
     public void LoadSavedData()
@@ -48,6 +78,19 @@ public class GameManager : MonoBehaviour
         Debug.Log($"{player.GetComponent<Renderer>().material} || {playersMat.index} || {matDatas[playersMat.index].material}");
         player.GetComponent<Renderer>().material = matDatas[playersMat.index].material;
     }
+
+    public void GetPlayerMatIndex()
+    {
+        playersMat.index = PlayerPrefs.GetInt("playerMat");
+    } 
+
+    public void SetPlayerMatIndex()
+    {
+        PlayerPrefs.SetInt("playerMat", playersMat.index);
+    }
+
+
+
 
     void LoadPlayerLevel()
     {

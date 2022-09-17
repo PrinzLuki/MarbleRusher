@@ -16,42 +16,42 @@ public class WinScreen : MonoBehaviour
         cam = Camera.main;
     }
 
-    void Update()
-    {
-        if (GetComponent<Canvas>().worldCamera == null)
-        {
-            GetComponent<Canvas>().worldCamera = Camera.main;
-            cam = Camera.main;
-        }
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        ButtonManagement(ray);
-    }
+    //void Update()
+    //{
+    //    if (GetComponent<Canvas>().worldCamera == null)
+    //    {
+    //        GetComponent<Canvas>().worldCamera = Camera.main;
+    //        cam = Camera.main;
+    //    }
+    //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+    //    ButtonManagement(ray);
+    //}
 
-    void ButtonManagement(Ray ray)
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (Physics.Raycast(ray, out RaycastHit hit, 999, buttonLayer))
-            {
-                ButtonCheck(hit.collider.gameObject);
-            }
-        }
-    }
+    //void ButtonManagement(Ray ray)
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        if (Physics.Raycast(ray, out RaycastHit hit, 999, buttonLayer))
+    //        {
+    //            ButtonCheck(hit.collider.gameObject);
+    //        }
+    //    }
+    //}
 
-    void ButtonCheck(GameObject obj)
-    {
-        if (obj == replayButton)
-        {
-            UI_Manager.Instance.Restart();
-        }
-        else if (obj == nextLevelButton)
-        {
-            SceneManagement.Instance.LoadScene();
-        }
-        else if (obj == mainMenuButton)
-        {
-            UI_Manager.Instance.BackToMenu();
-        }
-    }
+    //void ButtonCheck(GameObject obj)
+    //{
+    //    if (obj == replayButton)
+    //    {
+    //        UI_Manager.Instance.Restart();
+    //    }
+    //    else if (obj == nextLevelButton)
+    //    {
+    //        SceneManagement.Instance.LoadNextLevelScene();
+    //    }
+    //    else if (obj == mainMenuButton)
+    //    {
+    //        UI_Manager.Instance.BackToMenu();
+    //    }
+    //}
 
 }
