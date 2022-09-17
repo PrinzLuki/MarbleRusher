@@ -4887,7 +4887,7 @@ Transform:
   - {fileID: 4844981973214043562}
   - {fileID: 4844981971969150783}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4844981973214043558
 GameObject:
@@ -5021,12 +5021,10 @@ MonoBehaviour:
   maxAngularAcceleration: 10
   jumpPower: 5
   groundCheckRadial: 0.36
-  cam: {fileID: 0}
   enviromentLayer:
     serializedVersion: 2
     m_Bits: 256
   playerStuffObj: {fileID: 4844981971969150783}
-  cineMachine: {fileID: 0}
 --- !u!114 &1522408783062964357
 MonoBehaviour:
   m_ObjectHideFlags: 0

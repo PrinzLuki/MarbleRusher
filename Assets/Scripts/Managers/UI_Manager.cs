@@ -20,6 +20,7 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] GameObject lowerFrame;
     [SerializeField] GameObject leftFrame;
     [SerializeField] GameObject backGround;
+    [SerializeField] TMP_Text allDeathsTxt;
     [SerializeField] TMP_Text neededTimeTxt;
     [Header("Game UI")]
     [SerializeField] TMP_Text timerTmp;

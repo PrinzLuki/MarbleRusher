@@ -10,11 +10,11 @@ public class MarbleMovement : MonoBehaviour
     public float maxAngularAcceleration;
     public float jumpPower;
     public float groundCheckRadial;
-    public Camera cam;
+    Camera cam;
     public LayerMask enviromentLayer;
     public Transform playerStuffObj;
     Vector3 flashDirection;
-    public CinemachineFreeLook cineMachine;
+    CinemachineFreeLook cineMachine;
 
     public Vector3 FlashDirection { get => flashDirection; set => flashDirection = value; }
 
@@ -26,7 +26,6 @@ public class MarbleMovement : MonoBehaviour
         cineMachine.LookAt = this.transform;
         cineMachine.Follow = this.transform;
         Cursor.lockState = CursorLockMode.Locked;
-        Debug.Log("ResetCamera");
         cam.GetComponent<CameraController>().ResetCameraPosition();
     }
 

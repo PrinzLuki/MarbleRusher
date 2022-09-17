@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         if (player == null) { Debug.LogWarning("No Player found!!"); return; }
 
-        Debug.Log($"{player.GetComponent<Renderer>().material} || {playersMat.index} || {matDatas[playersMat.index].material}");
+        //Debug.Log($"{player.GetComponent<Renderer>().material} || {playersMat.index} || {matDatas[playersMat.index].material}");
         player.GetComponent<Renderer>().material = matDatas[playersMat.index].material;
     }
 

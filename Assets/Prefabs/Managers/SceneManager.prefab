@@ -143,8 +143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneList:
-  - sceneName: MarblesFirstTrail
+  - sceneName: FirstTrail
   - sceneName: SecondTrail
+  - sceneName: ThirdTrail
   fader: {fileID: 2617159685695295770}
   fadeTime: 1
 --- !u!1 &5574438735938567652

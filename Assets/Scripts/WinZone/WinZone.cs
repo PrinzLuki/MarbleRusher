@@ -16,11 +16,10 @@ public class WinZone : MonoBehaviour
     IEnumerator WinSequence(GameObject player)
     {
         GameManager.Instance.StopTimer();
-        GetComponent<Animator>().SetTrigger("win");
         yield return new WaitForSeconds(0.15f);
         player.GetComponent<MarbleMovement>().enabled = false;
+        player.GetComponent<Rigidbody>().isKinematic = true;
         yield return new WaitForSeconds(0.3f);
         UI_Manager.Instance.StartWinSequence();
-        player.GetComponent<Rigidbody>().isKinematic = true;
     }
 }
