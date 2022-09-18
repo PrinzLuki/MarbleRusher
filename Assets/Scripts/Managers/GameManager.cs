@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,8 +16,10 @@ public class GameManager : MonoBehaviour
     public List<MaterialData> matDatas;
 
     float matchTime;
-
+    CinemachineFreeLook cMachine;
     public static event Action<float> OnTimeChanged;
+
+    public float mouseSensivity = 50;
 
     private void Awake()
     {
@@ -26,13 +29,17 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        GetMouseSensivity();
+
     }
 
     #region TimeCounter
     public void ResetTimer()
     {
         matchTime = 0;
-    } 
+        OnTimeChanged?.Invoke(matchTime);
+    }
 
     public void StartTimer()
     {
@@ -79,6 +86,8 @@ public class GameManager : MonoBehaviour
         player.GetComponent<Renderer>().material = matDatas[playersMat.index].material;
     }
 
+
+    #region Save & Load
     public void GetPlayerMatIndex()
     {
         playersMat.index = PlayerPrefs.GetInt("playerMat");
@@ -89,7 +98,24 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("playerMat", playersMat.index);
     }
 
+    //MouseSensivity
+    public void SetMouseSensivity(float newSensivity)
+    {
+        PlayerPrefs.SetFloat("mouseSensivity", newSensivity);
+    }
 
+    public void GetMouseSensivity()
+    {
+        mouseSensivity = PlayerPrefs.GetFloat("mouseSensivity");
+    }
+
+    public void SetMouseSensivityInCam() 
+    {
+        cMachine = Camera.main.GetComponent<CameraController>().CMachine;
+        cMachine.m_XAxis.m_MaxSpeed = mouseSensivity * 4f;
+    }
+
+    #endregion
 
 
     void LoadPlayerLevel()

@@ -984,6 +984,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8490796214272679339, guid: e9de10d13b219cb42956f16f037b2779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8490796214741297253, guid: e9de10d13b219cb42956f16f037b2779,
         type: 3}
       propertyPath: buttonEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -994,6 +999,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 568481802}
+    - target: {fileID: 8490796215298947716, guid: e9de10d13b219cb42956f16f037b2779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e9de10d13b219cb42956f16f037b2779, type: 3}

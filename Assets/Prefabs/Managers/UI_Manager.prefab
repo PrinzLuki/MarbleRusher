@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 52.932396, y: -50}
+  m_SizeDelta: {x: 305.8649, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8582838216816820262
 CanvasRenderer:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2603,7 +2603,7 @@ Transform:
   - {fileID: 432730255752733698}
   - {fileID: 4089964474439792393}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4089964475170386739
 MonoBehaviour:
@@ -2624,6 +2624,7 @@ MonoBehaviour:
   lowerFrame: {fileID: 4089964475017227422}
   leftFrame: {fileID: 4089964474833319935}
   backGround: {fileID: 4089964474691383646}
+  allDeathsTxt: {fileID: 4089964474677698372}
   neededTimeTxt: {fileID: 4089964475062634895}
   timerTmp: {fileID: 9016968545319329955}
 --- !u!1 &4089964475340489862

@@ -779,6 +779,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796213786314646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,7 +1598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicVolume: 50
   soundVolume: 50
-  mouseSensitivity: 50
+  mouseSensivityTxt: {fileID: 8490796214024160687}
 --- !u!1 &8490796214193550137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2001,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796214319058222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,6 +2654,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796214473342833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3253,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796214694409162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,6 +3807,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796214754267199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4300,6 +4315,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796214943383042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,6 +4446,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796215006904939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,6 +4849,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796215129518354
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,6 +4980,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796215130775791
 GameObject:
   m_ObjectHideFlags: 0
@@ -5223,6 +5250,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796215191363646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,6 +5529,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796215391475861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5748,6 +5781,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttonHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8490796215496828896
 GameObject:
   m_ObjectHideFlags: 0

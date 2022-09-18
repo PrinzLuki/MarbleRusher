@@ -12,7 +12,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject pauseObj;
     bool isPaused;
     bool isPlaying = true;
-
+    public bool isTimerOn;
     [Header("WIN Window")]
     [SerializeField] Canvas winScreenCanvas;
     [SerializeField] GameObject frame;
@@ -53,7 +53,6 @@ public class UI_Manager : MonoBehaviour
     {
     }
 
-
     private void Update()
     {
         PauseGame();
@@ -66,7 +65,6 @@ public class UI_Manager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape) && isPlaying)
         {
             isPaused = !isPaused;
-            Debug.Log(isPaused);
             pauseObj.SetActive(isPaused);
 
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
@@ -141,28 +139,10 @@ public class UI_Manager : MonoBehaviour
 
     public void TimerTextChange(float time)
     {
-        int roundedTime = Mathf.RoundToInt(time);
-        int minutes = roundedTime / 60;
-        int seconds = roundedTime % 60;
-
-        if(minutes < 10 && seconds > 10)
-        {
-            timerTmp.text = "0" + minutes.ToString() + ":" + seconds.ToString();
-        }
-        else if(minutes < 10 && seconds < 10)
-        {
-            timerTmp.text = "0" + minutes.ToString() + ":" + "0" + seconds.ToString();
-        }
-        else if(minutes > 10 && seconds < 10)
-        {
-            timerTmp.text = minutes.ToString() + ":" + "0" + seconds.ToString();
-        }
-        else if(minutes > 10 && seconds > 10)
-        {
-            timerTmp.text = minutes.ToString() + ":" + seconds.ToString();
-        }
+        TimeSpan timeSpan = TimeSpan.FromSeconds(time);
 
 
+        timerTmp.text = timeSpan.Minutes.ToString() + ":" + timeSpan.Seconds.ToString() + ":" + timeSpan.Milliseconds.ToString();
     }
 
 }

@@ -8,33 +8,29 @@ public class MainMenu : MonoBehaviour
     [Header("Settings")]
     [Range(0, 100), SerializeField] float musicVolume = 50;
     [Range(0, 100), SerializeField] float soundVolume = 50;
-    [Range(0, 100), SerializeField] float mouseSensitivity = 50;
 
+    [SerializeField] TMP_Text mouseSensivityTxt;
+
+    [SerializeField] Material standardMat;
+    [SerializeField] Material hoveredMat;
 
     #region ButtonManagement MainMenu / Settings
     public void StartGame()
     {
-        Debug.Log("StartGame");
         SceneManagement.Instance.LoadScene();
-        UI_Manager.Instance.ActivateGameUI(true);
         Cursor.lockState = CursorLockMode.Locked;
 
     }
 
     public void OpenSettings()
     {
-        Debug.Log("OpenSettings");
+        mouseSensivityTxt.text = ((int)GameManager.Instance.mouseSensivity).ToString();
     }
 
     public void ExitGame()
     {
         Debug.Log("ExitGame");
         Application.Quit();
-    }
-
-    public void ChangeButtonColor()
-    {
-
     }
 
     public void IncreaseMusicVolume(TMP_Text value)
@@ -67,17 +63,20 @@ public class MainMenu : MonoBehaviour
     }
     public void IncreaseMouseSensivity(TMP_Text value)
     {
-        if (mouseSensitivity == 100) return;
+        if (GameManager.Instance.mouseSensivity == 400) return;
 
-        mouseSensitivity += 1;
-        value.text = mouseSensitivity.ToString();
+        GameManager.Instance.mouseSensivity += 1;
+        value.text = GameManager.Instance.mouseSensivity.ToString();
+        GameManager.Instance.SetMouseSensivity(GameManager.Instance.mouseSensivity);
     }
+
     public void DecreaseMouseSensivity(TMP_Text value)
     {
-        if (mouseSensitivity == 0) return;
+        if (GameManager.Instance.mouseSensivity == 0) return;
 
-        mouseSensitivity -= 1;
-        value.text = mouseSensitivity.ToString();
+        GameManager.Instance.mouseSensivity -= 1;
+        value.text = GameManager.Instance.mouseSensivity.ToString();
+        GameManager.Instance.SetMouseSensivity(GameManager.Instance.mouseSensivity);
     }
 
     #endregion

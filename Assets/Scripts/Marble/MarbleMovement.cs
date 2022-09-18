@@ -9,12 +9,16 @@ public class MarbleMovement : MonoBehaviour
     public float speed;
     public float maxAngularAcceleration;
     public float jumpPower;
+    public float jumpDelay = 0.2f;
     public float groundCheckRadial;
     Camera cam;
     public LayerMask enviromentLayer;
     public Transform playerStuffObj;
     Vector3 flashDirection;
     CinemachineFreeLook cineMachine;
+    float timer;
+    [Header("FeedBacks")]
+    [SerializeField] ParticleSystem jumpFeedBack; 
 
     public Vector3 FlashDirection { get => flashDirection; set => flashDirection = value; }
 
@@ -37,7 +41,12 @@ public class MarbleMovement : MonoBehaviour
 
     private void Update()
     {
-        Jump();
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            Jump();
+        }
         StopRotation();
     }
 
@@ -68,9 +77,11 @@ public class MarbleMovement : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() /*&&*/ /*!isPaused*/)
+        if (Input.GetKey(KeyCode.Space) && IsGrounded())
         {
+            timer = jumpDelay;
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+            jumpFeedBack.Play();
         }
     }
 
@@ -78,10 +89,6 @@ public class MarbleMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            //transform.eulerAngles = euler;
-            //float yAxis = Input.GetAxisRaw("Vertical") * -1;
-            //cineMachine.m_YAxis.Value += yAxis * Time.deltaTime;
-
             if (IsGrounded()) rb.velocity = Vector3.zero;
         }
     }
@@ -91,4 +98,14 @@ public class MarbleMovement : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, groundCheckRadial);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enviroment"))
+        {
+
+        }
+    }
+
+
 }

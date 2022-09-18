@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     [SerializeField]float xValue;
     [SerializeField]float yValue;
 
+    public CinemachineFreeLook CMachine { get => cam; set => cam = value; }
+
     public void ResetCameraPosition()
     {
         cam.m_XAxis.Value = xValue;

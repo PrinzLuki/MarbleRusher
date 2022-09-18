@@ -71,3 +71,4 @@ MonoBehaviour:
   - name: Wardrobe_Watermelon
     material: {fileID: 2100000, guid: b20ffa2d6cd8b3244bbd411c22568323, type: 2}
     index: 6
+  mouseSensivity: 50
